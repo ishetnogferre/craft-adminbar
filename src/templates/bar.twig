@@ -58,7 +58,7 @@
             <div class="adminbar__overlay">
                 <nav id="adminbar__links_nav" class="adminbar__links">
                     {% if displayDashboardLink ?? true %}
-                        <a href="{{ url(craft.app.config.general.cpTrigger ~ '/dashboard') }}" class="adminbar__has_icon"><span class="adminbar__icon">{{ svg(dashboardPath) }}</span>{{ 'Dashboard'|t }}</a>
+                        <a href="{{ cpUrl('dashboard') }}" class="adminbar__has_icon"><span class="adminbar__icon">{{ svg(dashboardPath) }}</span>{{ 'Dashboard'|t }}</a>
                     {% endif %}
 
                     {% if editLinkUrl ?? false %}
@@ -100,7 +100,7 @@
                     {% endfor %}
 
                     {% if currentUser and currentUser.admin and displaySettingsLink ?? true %}
-                        <a href="{{ url(craft.app.config.general.cpTrigger ~ '/settings') }}" class="adminbar__has_icon"><span class="adminbar__icon">{{ svg(settingsPath) }}</span>{{ 'Settings'|t }}</a>
+                        <a href="{{ cpUrl('settings') }}" class="adminbar__has_icon"><span class="adminbar__icon">{{ svg(settingsPath) }}</span>{{ 'Settings'|t }}</a>
                     {% endif %}
                 </nav>
                 <div class="adminbar__close">{{ svg(iconPath) }}</div>
